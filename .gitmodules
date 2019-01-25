@@ -1,3 +1,12 @@
 [submodule "b2share"]
 	path = b2share
 	url = https://github.com/stefan-wolfsheimer/b2share.git
+[submodule "B2HANDLE"]
+	path = B2HANDLE
+	url = https://github.com/EUDAT-B2SAFE/B2HANDLE.git
+[submodule "public-license-selector"]
+	path = public-license-selector
+	url = https://github.com/EUDAT-B2SHARE/public-license-selector.git
+[submodule "dockerize"]
+	path = dockerize
+	url = https://github.com/EUDAT-B2SHARE/dockerize.git
