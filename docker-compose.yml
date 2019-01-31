@@ -4,8 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.postgres
-    volumes:
-      - "${B2SHARE_DATADIR}/postgres-data:/var/lib/postgresql/data"
+#    volumes:
+#      - "${B2SHARE_DATADIR}/postgres-data:/var/lib/postgresql/data"
     hostname: db
     ports:
       - "127.0.0.1:5432:5432"
@@ -27,8 +27,8 @@ services:
     image: redis:3.2-alpine
     expose:
       - "6379"
-    volumes:
-      - "${B2SHARE_DATADIR}/redis-data:/data"
+#   volumes:
+#     - "${B2SHARE_DATADIR}/redis-data:/data"
     ports:
       - "127.0.0.1:6379:6379"
 
@@ -39,8 +39,8 @@ services:
     environment:
       - "RABBITMQ_DEFAULT_USER=b2share"
       - "RABBITMQ_DEFAULT_PASS=b2share"
-    volumes:
-      - "${B2SHARE_DATADIR}/rabbitmq-data:/var/lib/rabbitmq"
+#    volumes:
+#      - "${B2SHARE_DATADIR}/rabbitmq-data:/var/lib/rabbitmq"
     expose:
       - "15672"
       - "5672"
@@ -71,7 +71,7 @@ services:
       - "B2SHARE_SEARCH_ELASTIC_HOSTS='elasticsearch'"
       - "B2SHARE_UI_PATH=/build/b2share/webui/app"
     volumes:
-      - "${B2SHARE_DATADIR}/b2share-data:/usr/var/b2share-instance"
+#      - "${B2SHARE_DATADIR}/b2share-data:/usr/var/b2share-instance"
       - "${BUILDDIR}:/build"
     expose:
       - "5000"
